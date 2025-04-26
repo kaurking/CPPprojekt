@@ -1,0 +1,6 @@
+﻿  Game.cpp
+  main.cpp
+C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\main.cpp(12,14): error C2039: 'running': is not a member of 'Game'
+      C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\Game.h(9,7):
+      see declaration of 'Game'
+  
