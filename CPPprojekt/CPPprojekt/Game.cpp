@@ -71,7 +71,7 @@ void Game::update()
 	else 
 	{
 		this->pollEvents();
-		this->player.update();
+		this->player.update(this->window);
 		this->updateMousePositions();
 	}
 }

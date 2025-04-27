@@ -8,7 +8,7 @@ void Player::initVariables()
 void Player::initShape()
 {
 	this->shape.setFillColor(sf::Color::Red);
-	this->shape.setRadius(5.0f);
+	this->shape.setRadius(10.0f);
 }
 
 Player::Player(float x, float y)
@@ -44,9 +44,26 @@ void Player::updateInput()
 	}
 }
 
-void Player::update()
+void Player::updateWindowBoundsCollision(const sf::RenderTarget* target)
+{	
+	// Left
+	if (this->shape.getGlobalBounds().left <= 0.f)
+		this->shape.setPosition(0.f, this->shape.getGlobalBounds().top);
+	// Right
+	if (this->shape.getGlobalBounds().left + this->shape.getGlobalBounds().width >= target->getSize().x)
+		this->shape.setPosition(target->getSize().x - this->shape.getGlobalBounds().width, this->shape.getGlobalBounds().top);
+	// Up
+	if (this->shape.getGlobalBounds().top <= 0.f)
+		this->shape.setPosition(this->shape.getGlobalBounds().left, 0.f);
+	// Down
+	if (this->shape.getGlobalBounds().top + this->shape.getGlobalBounds().height >= target->getSize().y)
+		this->shape.setPosition(this->shape.getGlobalBounds().left, target->getSize().y - this->shape.getGlobalBounds().height);
+}
+
+void Player::update(const sf::RenderTarget* target)
 {
 	this->updateInput();
+	this->updateWindowBoundsCollision(target);
 }
 
 void Player::render(sf::RenderTarget* target)
