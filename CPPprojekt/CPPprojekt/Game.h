@@ -2,6 +2,7 @@
 
 #include<iostream>
 #include<vector>
+#include "Player.h"
 
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
@@ -26,6 +27,7 @@ private:
 	// Mängu loogika
 
 	// Mängu objektid
+	Player player;
 
 	
 

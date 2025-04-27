@@ -17,7 +17,8 @@ Game::~Game()
 void Game::initVariables()
 {
 	this->window = nullptr;
-	levelSelect = true;
+	levelSelect = false;
+	this->player = Player(50.f, 50.f);
 }
 
 void Game::initWindow()
@@ -64,17 +65,33 @@ void Game::update()
 {
 	if (this->levelSelect) 
 	{
-
+		this->pollEvents();
+		this->updateMousePositions();
 	}
-	this->pollEvents();
-	this->updateMousePositions();
+	else 
+	{
+		this->pollEvents();
+		this->player.update();
+		this->updateMousePositions();
+	}
 }
 
 void Game::render()
 {
 	this->window->clear();
 
-	// Joonista mängu objektid
+	if (this->levelSelect)
+	{
+		// Level select screen siia
+	}
+	else
+	{
+		// Kui on levelis
+		this->player.render(this->window);
+	}
+	
+
+	
 
 	this->window->display();
 }
