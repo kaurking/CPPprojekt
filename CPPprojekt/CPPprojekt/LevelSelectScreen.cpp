@@ -5,7 +5,7 @@
 
 void LevelSelectScreen::initVariables()
 {
-	if (!this->font.loadFromFile("../Fonts/RobotoBlackItalic-LmMD.ttf"))
+	if (!this->font.loadFromFile("Fonts/RobotoBlackItalic-LmMD.ttf"))
 		throw("FAILED TO OPEN FONT");
 }
 

@@ -18,7 +18,7 @@ Game::~Game()
 void Game::initVariables()
 {
 	this->window = nullptr;
-	this->levelSelect = false;
+	this->levelSelect = true;
 	this->player = Player(50.f, 50.f);
 	this->levelSelectScreen = LevelSelectScreen();
 }

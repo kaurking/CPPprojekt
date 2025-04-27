@@ -1,0 +1,14 @@
+Projekt: Pusle mäng.
+Liikmed: Kristo Krikmann, Kaur Kingsepp
+
+Seadsime üles projekti ja tutvusime SFML 2.6.2-ga.
+Andsime mängule hea baasi: lõime akna, liigutame mängijat akna piirides ja
+koostasime algse tasemete valimise vaate (vajutades ESC).
+Edasi plaanime välja mõelda pusle tasemeid, luua nendeks vajalike objekte ja loogikat, 
+täiustada UI-d ja lahendada mis iganes probleeme vahepeal ette tuleb.
+
+Kuidas koodi käivitada:
+Mine kausta CPPprojekt\x64\Release ja käivita seal olev fail "CPPprojekt.exe". 
+Peaks avanema konsool ja rakenduse aken taseme valimise vaates.
+
+
