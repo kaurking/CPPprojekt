@@ -6,6 +6,7 @@ Game::Game()
 {
 	this->initVariables();
 	this->initWindow();
+	this->levelSelectScreen.initButtons(this->window);
 }
 
 Game::~Game()
@@ -17,8 +18,9 @@ Game::~Game()
 void Game::initVariables()
 {
 	this->window = nullptr;
-	levelSelect = false;
+	this->levelSelect = false;
 	this->player = Player(50.f, 50.f);
+	this->levelSelectScreen = LevelSelectScreen();
 }
 
 void Game::initWindow()
@@ -48,31 +50,51 @@ void Game::pollEvents()
 			this->window->close();
 			break;
 		case sf::Event::KeyPressed:
-			if (this->ev.key.code == sf::Keyboard::Escape)
-				this->window->close();
+			if (this->ev.key.code == sf::Keyboard::Escape) 
+			{
+				if (this->levelSelect)
+					this->levelSelect = false;
+				else this->levelSelect = true;
+			}
 			break;
+		case sf::Event::MouseButtonPressed:
+			if (this->ev.mouseButton.button == sf::Mouse::Left && levelSelect)
+			{
+				sf::Vector2i mp = sf::Mouse::getPosition(*this->window);
+				int lvl = this->levelSelectScreen.wasButtonClicked(&mp);
+				switch (lvl)
+				{
+				case 0:
+					std::cout << 0 << '\n';
+					break;
+				case 1:
+					// Level 1
+					std::cout << 1 << '\n';
+					break;
+				case 2:
+					// Level 2
+					std::cout << 2 << '\n';
+					break;
+				case 3:
+					// Level 3
+					std::cout << 3 << '\n';
+					break;
+				default: throw("WHaT!HOW?");
+				}
+
+				levelSelect = false;
+			}
 		}
 	}
 }
 
-void Game::updateMousePositions()
-{
-	this->hiireKoordidAknas = sf::Mouse::getPosition(*this->window);
-}
-
-
 void Game::update()
 {
-	if (this->levelSelect) 
+	this->pollEvents();
+
+	if (!this->levelSelect) 
 	{
-		this->pollEvents();
-		this->updateMousePositions();
-	}
-	else 
-	{
-		this->pollEvents();
 		this->player.update(this->window);
-		this->updateMousePositions();
 	}
 }
 
@@ -82,7 +104,9 @@ void Game::render()
 
 	if (this->levelSelect)
 	{
+		this->window->clear(sf::Color(40, 40, 40, 100));
 		// Level select screen siia
+		this->levelSelectScreen.render(this->window);
 	}
 	else
 	{

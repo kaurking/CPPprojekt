@@ -50,14 +50,14 @@ void Player::updateWindowBoundsCollision(const sf::RenderTarget* target)
 	if (this->shape.getGlobalBounds().left <= 0.f)
 		this->shape.setPosition(0.f, this->shape.getGlobalBounds().top);
 	// Right
-	if (this->shape.getGlobalBounds().left + this->shape.getGlobalBounds().width >= target->getSize().x)
-		this->shape.setPosition(target->getSize().x - this->shape.getGlobalBounds().width, this->shape.getGlobalBounds().top);
+	else if (this->shape.getGlobalBounds().left + this->shape.getGlobalBounds().width >= target->getSize().x)
+		this->shape.setPosition(std::round(target->getSize().x - this->shape.getGlobalBounds().width), this->shape.getGlobalBounds().top);
 	// Up
 	if (this->shape.getGlobalBounds().top <= 0.f)
-		this->shape.setPosition(this->shape.getGlobalBounds().left, 0.f);
+		this->shape.setPosition(std::round(this->shape.getGlobalBounds().left), 0.f);
 	// Down
-	if (this->shape.getGlobalBounds().top + this->shape.getGlobalBounds().height >= target->getSize().y)
-		this->shape.setPosition(this->shape.getGlobalBounds().left, target->getSize().y - this->shape.getGlobalBounds().height);
+	else if (this->shape.getGlobalBounds().top + this->shape.getGlobalBounds().height >= target->getSize().y)
+		this->shape.setPosition(std::round(this->shape.getGlobalBounds().left), target->getSize().y - this->shape.getGlobalBounds().height);
 }
 
 void Player::update(const sf::RenderTarget* target)

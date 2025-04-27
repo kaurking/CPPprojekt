@@ -3,6 +3,7 @@
 #include<iostream>
 #include<vector>
 #include "Player.h"
+#include "LevelSelectScreen.h"
 
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
@@ -18,19 +19,13 @@ private:
 	sf::RenderWindow* window;
 	sf::VideoMode videoMode;
 	sf::Event ev;
-	bool levelSelect;
-
-	// Hiire positsioon
-	sf::Vector2i hiireKoordidAknas;
-
 
 	// Mängu loogika
+	LevelSelectScreen levelSelectScreen;
+	bool levelSelect;
 
 	// Mängu objektid
 	Player player;
-
-	
-
 
 	// Privaatsed funktsioonid
 	void initVariables();	//init = initialize
@@ -46,7 +41,6 @@ public:
 	const bool isRunning();
 
 	void pollEvents();
-	void updateMousePositions();
 	void update();
 
 	void render();

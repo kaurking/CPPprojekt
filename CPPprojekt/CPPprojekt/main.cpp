@@ -6,6 +6,7 @@ int main()
 	// Game engine
 	Game game;
 
+	// Game loop
 	while (game.isRunning()) 
 	{
 		//Update

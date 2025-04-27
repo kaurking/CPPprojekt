@@ -1,6 +1,18 @@
-﻿  Generating code
-  0 of 28 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  CPPprojekt.vcxproj -> C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\x64\Release\CPPprojekt.exe
+﻿  Game.cpp
+C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\Game.h(29,7): error C2371: 'Game::levelSelect': redefinition; different basic types
+  LevelSelectScreen.cpp
+  (compiling source file 'Game.cpp')
+      C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\Game.h(28,20):
+      see declaration of 'Game::levelSelect'
+  
+C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\LevelSelectScreen.cpp(6,1): error C2589: '}': illegal token on right side of '::'
+C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\LevelSelectScreen.cpp(8,1): error C2628: '' followed by 'void' is illegal (did you forget a ';'?)
+C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\LevelSelectScreen.cpp(5,15): error C2062: type 'unknown-type' unexpected
+C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\LevelSelectScreen.cpp(9,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\LevelSelectScreen.cpp(15,23): error C2059: syntax error: ';'
+  main.cpp
+C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\Game.h(29,7): error C2371: 'Game::levelSelect': redefinition; different basic types
+  (compiling source file 'main.cpp')
+      C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\Game.h(28,20):
+      see declaration of 'Game::levelSelect'
+  
