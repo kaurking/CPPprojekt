@@ -20,9 +20,9 @@ public:
 	Player(float x = 0.f, float y = 0.f);
 	virtual ~Player();
 
-	void updateInput();
+	void move(float deltaTime);
 	void updateWindowBoundsCollision(const sf::RenderTarget* target);
-	void update(const sf::RenderTarget* target);
-	void render(sf::RenderTarget* target);
+	void update(const sf::RenderTarget* target, float deltaTime);
+	void render(sf::RenderTarget& target);
 };
 

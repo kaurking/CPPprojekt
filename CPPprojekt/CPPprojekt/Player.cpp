@@ -2,7 +2,7 @@
 
 void Player::initVariables()
 {
-	this->movementSpeed = 2.f;
+	this->movementSpeed = 200.f;
 }
 
 void Player::initShape()
@@ -23,26 +23,36 @@ Player::~Player()
 {
 }
 
-void Player::updateInput()
+void Player::move(float deltaTime)
 {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-	{
-		this->shape.move(-this->movementSpeed, 0.f);
-	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-	{
-		this->shape.move(this->movementSpeed, 0.f);
-	}
+	sf::Vector2f direction(0.f, 0.f);
 
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+		direction.x -= 1.f;
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+		direction.x += 1.f;
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+		direction.y -= 1.f;
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+		direction.y += 1.f;
+
+	if (direction.x != 0.f || direction.y != 0.f)
 	{
-		this->shape.move(0.f, -this->movementSpeed);
+		float length = std::sqrt(direction.x * direction.x + direction.y * direction.y);
+		direction /= length;
 	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-	{
-		this->shape.move(0.f, this->movementSpeed);
-	}
+	
+	// sprintimise jaoks
+	bool isSprinting = sf::Keyboard::isKeyPressed(sf::Keyboard::LShift);
+	float speed = this->movementSpeed * (isSprinting ? 1.5f : 1.f);
+
+	// nt 60 fpsi puhul : direction(0, 1) * 200.f * 0,0167f = 3.33 pixels/frame = 200 pixels/s
+	this->shape.move(direction * speed * deltaTime);
+	// kuna .move teeb liigutust iga frame, siis kui fps on suurem, siis liigub objekt ikka sama kiirelt,
+	// kuna deltaTime on madalam 120 fps = 0,0083f.
+
 }
+
 
 void Player::updateWindowBoundsCollision(const sf::RenderTarget* target)
 {	
@@ -60,13 +70,13 @@ void Player::updateWindowBoundsCollision(const sf::RenderTarget* target)
 		this->shape.setPosition(std::round(this->shape.getGlobalBounds().left), target->getSize().y - this->shape.getGlobalBounds().height);
 }
 
-void Player::update(const sf::RenderTarget* target)
+void Player::update(const sf::RenderTarget* target, float deltaTime)
 {
-	this->updateInput();
+	this->move(deltaTime);
 	this->updateWindowBoundsCollision(target);
 }
 
-void Player::render(sf::RenderTarget* target)
+void Player::render(sf::RenderTarget& target)
 {
-	target->draw(this->shape);
+	target.draw(this->shape);
 }

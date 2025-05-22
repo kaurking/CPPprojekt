@@ -18,7 +18,7 @@ Game::~Game()
 void Game::initVariables()
 {
 	this->window = nullptr;
-	this->levelSelect = true;
+	this->currentState = GameState::LevelSelect;
 	this->player = Player(50.f, 50.f);
 	this->levelSelectScreen = LevelSelectScreen();
 }
@@ -49,73 +49,98 @@ void Game::pollEvents()
 		case sf::Event::Closed:
 			this->window->close();
 			break;
-		case sf::Event::KeyPressed:
-			if (this->ev.key.code == sf::Keyboard::Escape) 
-			{
-				if (this->levelSelect)
-					this->levelSelect = false;
-				else this->levelSelect = true;
-			}
-			break;
-		case sf::Event::MouseButtonPressed:
-			if (this->ev.mouseButton.button == sf::Mouse::Left && levelSelect)
-			{
-				sf::Vector2i mp = sf::Mouse::getPosition(*this->window);
-				int lvl = this->levelSelectScreen.wasButtonClicked(&mp);
-				switch (lvl)
-				{
-				case 0:
-					std::cout << 0 << '\n';
-					break;
-				case 1:
-					// Level 1
-					std::cout << 1 << '\n';
-					break;
-				case 2:
-					// Level 2
-					std::cout << 2 << '\n';
-					break;
-				case 3:
-					// Level 3
-					std::cout << 3 << '\n';
-					break;
-				default: throw("WHaT!HOW?");
-				}
 
-				levelSelect = false;
-			}
+		case sf::Event::KeyPressed:
+			this->handleKeyPress(this->ev.key.code);
+			break;
+
+		case sf::Event::MouseButtonPressed:
+			this->handleMouseClick(this->ev.mouseButton);
+			break;
+
+		default: 
+			break;
 		}
 	}
 }
 
-void Game::update()
+// mõeldud mängu ajal sellega seonduvate nupuvajutuste jaoks
+void Game::handleKeyPress(sf::Keyboard::Key key)
+{
+	if (key == sf::Keyboard::Escape)
+	{
+		if (this->currentState == GameState::LevelSelect)
+			this->currentState = GameState::Playing;
+		else if (this->currentState == GameState::Playing)
+			this->currentState = GameState::LevelSelect;
+
+		return;
+	}
+
+	if (this->currentState == GameState::Playing)
+	{
+		// mängu ajal midagi
+	}
+	else if (this->currentState == GameState::LevelSelect)
+	{
+		// menüünpud
+	}
+}
+
+// mõeldud mängu ajal sellega seonduvate hiireklahvivajutuste jaoks
+void Game::handleMouseClick(const sf::Event::MouseButtonEvent& mouse)
+{
+	if (this->currentState == GameState::LevelSelect && mouse.button == sf::Mouse::Left)
+	{
+		sf::Vector2i mp = sf::Mouse::getPosition(*this->window);
+		int lvl = this->levelSelectScreen.wasButtonClicked(&mp);
+
+		switch (lvl)
+		{
+		case 0: std::cout << "Level 0\n"; break;
+		case 1: std::cout << "Level 1\n"; break;
+		case 2: std::cout << "Level 2\n"; break;
+		case 3: std::cout << "Level 3\n"; break;
+		default: throw("WHaT!HOW?");
+		}
+
+		this->currentState = GameState::Playing;
+	}
+}
+
+
+void Game::update(float deltaTime)
 {
 	this->pollEvents();
 
-	if (!this->levelSelect) 
+	if (this->currentState == GameState::Playing)
 	{
-		this->player.update(this->window);
+		this->player.update(this->window, deltaTime);
+	}
+	else if (this->currentState == GameState::LevelSelect)
+	{
+		// level select screen?
 	}
 }
+
 
 void Game::render()
 {
 	this->window->clear();
 
-	if (this->levelSelect)
+	switch (this->currentState)
 	{
-		this->window->clear(sf::Color(40, 40, 40, 100));
-		// Level select screen siia
-		this->levelSelectScreen.render(this->window);
-	}
-	else
-	{
-		// Kui on levelis
-		this->player.render(this->window);
-	}
-	
+	case GameState::Playing:
+		this->player.render(*this->window);
+		break;
 
-	
+	case GameState::LevelSelect:
+		this->levelSelectScreen.render(*this->window);
+		break;
+	case GameState::Paused:
+		// pausiekraan
+		break;
+	}
 
 	this->window->display();
 }

@@ -1,33 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\",
+  "WorkspaceRootPath": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|solutionrelative:CPPprojekt\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|solutionrelative:CPPprojekt\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\LevelSelectScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|solutionrelative:CPPprojekt\\LevelSelectScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\LevelSelectScreen.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|solutionrelative:CPPprojekt\\LevelSelectScreen.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|solutionrelative:CPPprojekt\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|solutionrelative:CPPprojekt\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\LevelSelectScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|solutionrelative:CPPprojekt\\LevelSelectScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|solutionrelative:CPPprojekt\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|solutionrelative:CPPprojekt\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\LevelSelectScreen.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|solutionrelative:CPPprojekt\\LevelSelectScreen.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Button.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|solutionrelative:CPPprojekt\\Button.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Button.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|solutionrelative:CPPprojekt\\Button.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9187272E-4980-4C9F-881C-12BCAECE2784}|CPPprojekt\\CPPprojekt.vcxproj|solutionrelative:CPPprojekt\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -37,86 +45,31 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 185,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Game.h",
-              "DocumentMoniker": "C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Game.h",
-              "RelativeDocumentMoniker": "CPPprojekt\\Game.h",
-              "ToolTip": "C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Game.h",
-              "RelativeToolTip": "CPPprojekt\\Game.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-26T13:31:33.937Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LevelSelectScreen.h",
-              "DocumentMoniker": "C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\LevelSelectScreen.h",
-              "RelativeDocumentMoniker": "CPPprojekt\\LevelSelectScreen.h",
-              "ToolTip": "C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\LevelSelectScreen.h",
-              "RelativeToolTip": "CPPprojekt\\LevelSelectScreen.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-26T14:40:51.703Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Player.h",
-              "DocumentMoniker": "C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Player.h",
-              "RelativeDocumentMoniker": "CPPprojekt\\Player.h",
-              "ToolTip": "C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Player.h",
-              "RelativeToolTip": "CPPprojekt\\Player.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-27T09:07:56.748Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\main.cpp",
-              "RelativeDocumentMoniker": "CPPprojekt\\main.cpp",
-              "ToolTip": "C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\main.cpp",
-              "RelativeToolTip": "CPPprojekt\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-26T13:09:48.377Z"
-            }
-          ]
-        },
-        {
           "DockedWidth": 215,
           "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LevelSelectScreen.cpp",
-              "DocumentMoniker": "C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\LevelSelectScreen.cpp",
-              "RelativeDocumentMoniker": "CPPprojekt\\LevelSelectScreen.cpp",
-              "ToolTip": "C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\LevelSelectScreen.cpp",
-              "RelativeToolTip": "CPPprojekt\\LevelSelectScreen.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC4AAAA+AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\main.cpp",
+              "RelativeDocumentMoniker": "CPPprojekt\\main.cpp",
+              "ToolTip": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\main.cpp",
+              "RelativeToolTip": "CPPprojekt\\main.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-27T10:56:05.233Z",
+              "WhenOpened": "2025-05-22T12:44:57.921Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Game.cpp",
-              "DocumentMoniker": "C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Game.cpp",
+              "DocumentMoniker": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Game.cpp",
               "RelativeDocumentMoniker": "CPPprojekt\\Game.cpp",
-              "ToolTip": "C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Game.cpp",
+              "ToolTip": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Game.cpp",
               "RelativeToolTip": "CPPprojekt\\Game.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-27T10:55:15.639Z",
               "EditorCaption": ""
@@ -124,14 +77,93 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Game.h",
+              "DocumentMoniker": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Game.h",
+              "RelativeDocumentMoniker": "CPPprojekt\\Game.h",
+              "ToolTip": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Game.h",
+              "RelativeToolTip": "CPPprojekt\\Game.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-22T12:44:45.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Player.cpp",
-              "DocumentMoniker": "C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Player.cpp",
+              "DocumentMoniker": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Player.cpp",
               "RelativeDocumentMoniker": "CPPprojekt\\Player.cpp",
-              "ToolTip": "C:\\Users\\Kristo\\Desktop\\kool\\C\u002B\u002B\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Player.cpp",
+              "ToolTip": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Player.cpp",
               "RelativeToolTip": "CPPprojekt\\Player.cpp",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADIAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAewFAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-27T09:10:21.801Z"
+              "WhenOpened": "2025-04-27T09:10:21.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LevelSelectScreen.cpp",
+              "DocumentMoniker": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\LevelSelectScreen.cpp",
+              "RelativeDocumentMoniker": "CPPprojekt\\LevelSelectScreen.cpp",
+              "ToolTip": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\LevelSelectScreen.cpp",
+              "RelativeToolTip": "CPPprojekt\\LevelSelectScreen.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-27T10:56:05.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LevelSelectScreen.h",
+              "DocumentMoniker": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\LevelSelectScreen.h",
+              "RelativeDocumentMoniker": "CPPprojekt\\LevelSelectScreen.h",
+              "ToolTip": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\LevelSelectScreen.h",
+              "RelativeToolTip": "CPPprojekt\\LevelSelectScreen.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-22T12:44:51.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Button.cpp",
+              "DocumentMoniker": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Button.cpp",
+              "RelativeDocumentMoniker": "CPPprojekt\\Button.cpp",
+              "ToolTip": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Button.cpp",
+              "RelativeToolTip": "CPPprojekt\\Button.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-22T17:45:07.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Button.h",
+              "DocumentMoniker": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Button.h",
+              "RelativeDocumentMoniker": "CPPprojekt\\Button.h",
+              "ToolTip": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Button.h",
+              "RelativeToolTip": "CPPprojekt\\Button.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-22T17:42:44.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Player.h",
+              "RelativeDocumentMoniker": "CPPprojekt\\Player.h",
+              "ToolTip": "C:\\Users\\kaurking\\CPP\\CPPprojekt\\CPPprojekt\\CPPprojekt\\Player.h",
+              "RelativeToolTip": "CPPprojekt\\Player.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-22T12:41:54.563Z",
+              "EditorCaption": ""
             }
           ]
         }

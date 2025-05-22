@@ -1,5 +1,6 @@
 #include "LevelSelectScreen.h"
 
+#include "Button.h"
 #include <string>
 #include <array>
 
@@ -14,7 +15,7 @@ int LevelSelectScreen::wasButtonClicked(sf::Vector2i* mousePos)
 	sf::Vector2f mousePosF((float)mousePos->x, (float)mousePos->y);
 	for (int i = 0; i < std::size(buttons); ++i)
 	{
-		if (buttons[i].getGlobalBounds().contains(mousePosF))
+		if (buttons[i].isClicked(mousePosF))
 			return i + 1;
 	}
 	return 0;
@@ -29,12 +30,12 @@ void LevelSelectScreen::initButtons(const sf::RenderTarget* target)
 
 	for (int i = 0; i < std::size(labels); ++i)
 	{
-		sf::Text button;
-		button.setFont(this->font);
-		button.setString(labels[i]);
-		button.setCharacterSize(24);
-		button.setFillColor(sf::Color::White);
-		button.setPosition(x + i * (button.getGlobalBounds().width + vahe), y);
+		sf::Vector2f position(
+			x + i * (100.f + vahe), // 100.f nuppude vahe
+			y
+		);
+
+		Button button(labels[i], position, this->font);
 		buttons.push_back(button);
 	}
 }
@@ -49,8 +50,8 @@ void LevelSelectScreen::update(const sf::RenderTarget* target)
 
 }
 
-void LevelSelectScreen::render(sf::RenderTarget* target)
+void LevelSelectScreen::render(sf::RenderTarget& target)
 {
 	for (auto el : this->buttons)
-		target->draw(el);
+		el.render(target);
 }

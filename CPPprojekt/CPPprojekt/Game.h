@@ -20,6 +20,10 @@ private:
 	sf::VideoMode videoMode;
 	sf::Event ev;
 
+	// mängu praegune seis
+	enum class GameState { Playing, LevelSelect, Paused };
+	GameState currentState;
+
 	// Mängu loogika
 	LevelSelectScreen levelSelectScreen;
 	bool levelSelect;
@@ -41,7 +45,9 @@ public:
 	const bool isRunning();
 
 	void pollEvents();
-	void update();
+	void handleKeyPress(sf::Keyboard::Key key);
+	void handleMouseClick(const sf::Event::MouseButtonEvent& mouse);
+	void update(float deltaTime);
 
 	void render();
 };
