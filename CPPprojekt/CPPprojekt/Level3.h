@@ -15,5 +15,7 @@ public:
     void update(sf::RenderTarget* target, float deltaTime) override;
     void render(sf::RenderTarget& target) override;
     void reset() override;
+    void resetPlayer();
+    void resetEnemies();
 
 };

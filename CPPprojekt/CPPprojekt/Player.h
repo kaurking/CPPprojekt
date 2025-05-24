@@ -20,6 +20,7 @@ public:
 	Player(float x = 0.f, float y = 0.f);
 	virtual ~Player();
 
+	sf::CircleShape& getShape();
 	void setPositionOfPlayer(float x, float y);
 	void move(float deltaTime);
 	void updateWindowBoundsCollision(const sf::RenderTarget* target);

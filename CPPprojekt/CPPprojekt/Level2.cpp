@@ -18,6 +18,15 @@ void Level2::render(sf::RenderTarget& target) {
 }
 
 void Level2::reset() {
-    player.setPositionOfPlayer(50.f, 50.f);
+    resetPlayer();
     box.setPosition(200.f, 200.f);
+}
+
+void Level2::resetPlayer() {
+    player.getShape().setPosition(50.f, 50.f);
+}
+
+void Level2::resetEnemies()
+{
+   
 }

@@ -3,21 +3,30 @@
 Level1::Level1() {
     this->player = Player(50.f, 50.f);
 
-    box.setSize({ 100.f, 100.f });
-    box.setFillColor(sf::Color::Green);
-    box.setPosition(200.f, 200.f);
+    this->enemy1 = Enemy({ {100.f, 100.f}, {300.f, 100.f}, {300.f, 300.f}, {100.f, 300.f} });
+
 }
 
 void Level1::update(sf::RenderTarget* target, float deltaTime) {
     player.update(target ,deltaTime);
+    enemy1.update(target, deltaTime);
 }
 
 void Level1::render(sf::RenderTarget& target) {
     player.render(target);
-    target.draw(box);
+    enemy1.render(target);
 }
 
 void Level1::reset() {
-    player.setPositionOfPlayer(50.f, 50.f);
-    box.setPosition(200.f, 200.f);
+    resetPlayer();
+    resetEnemies();
+}
+
+void Level1::resetPlayer() {
+    player.getShape().setPosition(50.f, 50.f);
+}
+
+void Level1::resetEnemies()
+{
+    enemy1.reset();
 }

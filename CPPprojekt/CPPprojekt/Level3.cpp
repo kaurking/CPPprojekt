@@ -18,6 +18,15 @@ void Level3::render(sf::RenderTarget& target) {
 }
 
 void Level3::reset() {
-    player.setPositionOfPlayer(50.f, 50.f);
+    resetPlayer();
     box.setPosition(200.f, 200.f);
+}
+
+void Level3::resetPlayer() {
+    player.getShape().setPosition(50.f, 50.f);
+}
+
+void Level3::resetEnemies()
+{
+
 }

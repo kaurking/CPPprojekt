@@ -23,6 +23,11 @@ Player::~Player()
 {
 }
 
+sf::CircleShape& Player::getShape()
+{
+	return this->shape;
+}
+
 void Player::setPositionOfPlayer(float x, float y)
 {
 	this->shape.setPosition(x, y);
