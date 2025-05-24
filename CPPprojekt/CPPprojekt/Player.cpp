@@ -23,6 +23,11 @@ Player::~Player()
 {
 }
 
+void Player::setPositionOfPlayer(float x, float y)
+{
+	this->shape.setPosition(x, y);
+}
+
 void Player::move(float deltaTime)
 {
 	sf::Vector2f direction(0.f, 0.f);

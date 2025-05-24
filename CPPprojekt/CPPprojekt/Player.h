@@ -20,6 +20,7 @@ public:
 	Player(float x = 0.f, float y = 0.f);
 	virtual ~Player();
 
+	void setPositionOfPlayer(float x, float y);
 	void move(float deltaTime);
 	void updateWindowBoundsCollision(const sf::RenderTarget* target);
 	void update(const sf::RenderTarget* target, float deltaTime);

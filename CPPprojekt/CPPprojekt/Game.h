@@ -4,6 +4,11 @@
 #include<vector>
 #include "Player.h"
 #include "LevelSelectScreen.h"
+#include "PausedScreen.h"
+#include "Level.h"
+#include "Level1.h"
+#include "Level2.h"
+#include "Level3.h"
 
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
@@ -24,12 +29,15 @@ private:
 	enum class GameState { Playing, LevelSelect, Paused };
 	GameState currentState;
 
+	// mängu levelid
+	Level* currentLevel;
+	std::vector<Level*> levels;
+
 	// Mängu loogika
 	LevelSelectScreen levelSelectScreen;
-	bool levelSelect;
+	PausedScreen pausedScreen;
 
 	// Mängu objektid
-	Player player;
 
 	// Privaatsed funktsioonid
 	void initVariables();	//init = initialize
