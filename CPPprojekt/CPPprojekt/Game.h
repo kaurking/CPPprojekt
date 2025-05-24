@@ -52,6 +52,7 @@ public:
 	// Funktsioonid
 	const bool isRunning();
 
+
 	void pollEvents();
 	void handleKeyPress(sf::Keyboard::Key key);
 	void handleMouseClick(const sf::Event::MouseButtonEvent& mouse);

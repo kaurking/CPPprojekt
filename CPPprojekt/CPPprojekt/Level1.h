@@ -1,22 +1,18 @@
 #pragma once
 
 #include "Level.h"
-#include "Player.h"
-#include "Enemy.h"
 
 class Level1 : public Level 
 {
 private: 
 	// mis levelis sees on
-    Player player;
     Enemy enemy1;
 public: 
     Level1();
 
-    void update(sf::RenderTarget* target, float deltaTime) override;
+    void update(const sf::RenderTarget* target, float deltaTime) override;
     void render(sf::RenderTarget& target) override;
     void reset() override;
-    void resetPlayer();
     void resetEnemies();
 
 };

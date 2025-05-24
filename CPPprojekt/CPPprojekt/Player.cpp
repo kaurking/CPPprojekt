@@ -1,4 +1,5 @@
 #include "Player.h"
+#include<iostream>
 
 void Player::initVariables()
 {
@@ -13,7 +14,8 @@ void Player::initShape()
 
 Player::Player(float x, float y)
 {
-	this->shape.setPosition(x, y);
+	this->startPos = { x, y };
+	this->shape.setPosition(startPos);
 
 	this->initVariables();
 	this->initShape();
@@ -89,4 +91,8 @@ void Player::update(const sf::RenderTarget* target, float deltaTime)
 void Player::render(sf::RenderTarget& target)
 {
 	target.draw(this->shape);
+}
+
+void Player::reset() {
+	this->shape.setPosition(this->startPos);
 }

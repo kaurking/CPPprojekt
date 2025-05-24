@@ -1,29 +1,24 @@
 #include "Level1.h"
 
-Level1::Level1() {
-    this->player = Player(50.f, 50.f);
-
+Level1::Level1() : Level(50.f, 50.f) {
+    
     this->enemy1 = Enemy({ {100.f, 100.f}, {300.f, 100.f}, {300.f, 300.f}, {100.f, 300.f} });
-
+    enemies.push_back(enemy1);
 }
 
-void Level1::update(sf::RenderTarget* target, float deltaTime) {
-    player.update(target ,deltaTime);
-    enemy1.update(target, deltaTime);
+void Level1::update(const sf::RenderTarget* target, float deltaTime) {
+    Level::update(target, deltaTime); // mängija ja vastaste collisioni jaoks
+
 }
 
 void Level1::render(sf::RenderTarget& target) {
-    player.render(target);
-    enemy1.render(target);
+    Level::render(target); // mängija ja vastaste renderimine
+
 }
 
 void Level1::reset() {
-    resetPlayer();
+    player.reset();
     resetEnemies();
-}
-
-void Level1::resetPlayer() {
-    player.getShape().setPosition(50.f, 50.f);
 }
 
 void Level1::resetEnemies()

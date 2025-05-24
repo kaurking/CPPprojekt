@@ -1,29 +1,25 @@
 #include "Level3.h"
 
-Level3::Level3() {
-    this->player = Player(50.f, 50.f);
+Level3::Level3() : Level(50.f, 50.f) {
 
     box.setSize({ 100.f, 100.f });
     box.setFillColor(sf::Color::Red);
     box.setPosition(200.f, 200.f);
 }
 
-void Level3::update(sf::RenderTarget* target, float deltaTime) {
-    player.update(target, deltaTime);
+void Level3::update(const sf::RenderTarget* target, float deltaTime) {
+    Level::update(target, deltaTime); // mängija ja vastaste collisioni jaoks
+
 }
 
 void Level3::render(sf::RenderTarget& target) {
-    player.render(target);
+    Level::render(target); // mängija ja vastaste renderimine
     target.draw(box);
 }
 
 void Level3::reset() {
-    resetPlayer();
+    player.reset();
     box.setPosition(200.f, 200.f);
-}
-
-void Level3::resetPlayer() {
-    player.getShape().setPosition(50.f, 50.f);
 }
 
 void Level3::resetEnemies()

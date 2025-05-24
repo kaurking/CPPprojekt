@@ -12,6 +12,7 @@ class Player
 private: 
 	sf::CircleShape shape;
 	float movementSpeed;
+	sf::Vector2f startPos;
 
 	void initVariables();
 	void initShape();
@@ -26,5 +27,6 @@ public:
 	void updateWindowBoundsCollision(const sf::RenderTarget* target);
 	void update(const sf::RenderTarget* target, float deltaTime);
 	void render(sf::RenderTarget& target);
+	void reset();
 };
 
