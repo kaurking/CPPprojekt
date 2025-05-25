@@ -1,2 +1,2 @@
-﻿  Level.cpp
-LINK : fatal error LNK1104: cannot open file 'C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\x64\Release\CPPprojekt.exe'
+﻿Game.obj : error LNK2001: unresolved external symbol "public: class std::vector<class Button,class std::allocator<class Button> > & __cdecl LevelSelectScreen::getButtons(void)" (?getButtons@LevelSelectScreen@@QEAAAEAV?$vector@VButton@@V?$allocator@VButton@@@std@@@std@@XZ)
+C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\x64\Release\CPPprojekt.exe : fatal error LNK1120: 1 unresolved externals

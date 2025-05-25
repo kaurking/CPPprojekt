@@ -1,7 +1,2 @@
-﻿  Button.cpp
-  Level3.cpp
-C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\Level3.cpp(28,35): error C2086: 'std::vector<sf::Vector2f,std::allocator<sf::Vector2f>> path': redefinition
-      C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\Level3.cpp(19,35):
-      see declaration of 'path'
-  
-  Generating Code...
+﻿  Level3.cpp
+  CPPprojekt.vcxproj -> C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\x64\Debug\CPPprojekt.exe

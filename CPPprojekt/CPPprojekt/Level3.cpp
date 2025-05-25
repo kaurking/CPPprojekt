@@ -25,7 +25,7 @@ void Level3::initEnemies()
 
         x = 580.f;
         y = 225.f + i * 50;
-        std::vector<sf::Vector2f> path;
+        path.clear();
         path.push_back({ x, y });
         path.push_back({ x - 380, y });
 
