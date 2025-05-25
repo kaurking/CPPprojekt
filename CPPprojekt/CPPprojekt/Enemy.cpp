@@ -1,26 +1,20 @@
 #include "Enemy.h"
 #include <vector>
 
-void Enemy::initVariables()
-{
-	this->movementSpeed = 200.f;
-	
-}
-
 void Enemy::initShape()
 {
 	this->shape.setFillColor(sf::Color::Red);
 	this->shape.setRadius(10.0f);
 }
 
-Enemy::Enemy(std::vector<sf::Vector2f> pathOfEnemy)
+Enemy::Enemy(std::vector<sf::Vector2f> pathOfEnemy, float moveSpeed)
 {
+	this->movementSpeed = moveSpeed;
 	this->pathOfEnemy = pathOfEnemy;
 	this->shape.setPosition(pathOfEnemy[0]);
 	this->startPos = pathOfEnemy[0];
 	this->endPos = pathOfEnemy.back();
 
-	this->initVariables();
 	this->initShape();
 }
 

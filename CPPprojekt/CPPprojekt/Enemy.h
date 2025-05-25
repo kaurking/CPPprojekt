@@ -25,10 +25,9 @@ private:
 	unsigned int currentTargetIndex = 1;
 	bool movingForward = true;
 
-	void initVariables();
 	void initShape();
 public: 
-	Enemy(std::vector<sf::Vector2f> pathOfEnemy = { {0.f, 0.f} });
+	Enemy(std::vector<sf::Vector2f> pathOfEnemy = { {0.f, 0.f} }, float moveSpeed = 200.f);
 	~Enemy();
 
 	sf::CircleShape getShape();

@@ -6,7 +6,7 @@ class Level1 : public Level
 {
 private: 
 	// mis levelis sees on
-    Enemy enemy1;
+
 public: 
     Level1();
 
