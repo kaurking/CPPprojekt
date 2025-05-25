@@ -161,6 +161,7 @@
     <ClInclude Include="Player.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="Level1.txt" />
     <Text Include="Level2.txt" />
     <Text Include="Level3.txt" />
   </ItemGroup>

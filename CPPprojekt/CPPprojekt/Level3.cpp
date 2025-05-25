@@ -14,23 +14,8 @@ void Level3::initEnemies()
     float speed = 250.f;
     for (int i = 0; i < 4; ++i)
     {
-        float x = 200.f;
-        float y = 200.f + i * 50;
-        std::vector<sf::Vector2f> path;
-        path.push_back({ x, y });
-        path.push_back({ x + 380, y });
-
-        Enemy e1(path, speed);
-        enemies.push_back(e1);
-
-        x = 580.f;
-        y = 225.f + i * 50;
-        path.clear();
-        path.push_back({ x, y });
-        path.push_back({ x - 380, y });
-
-        Enemy e2(path, speed);
-        enemies.push_back(e2);
+        enemies.push_back(Enemy({ {200.f, 200.f + i * 50}, {200.f + 380, 200.f + i * 50} }, speed));
+        enemies.push_back(Enemy({ {580.f, 225.f + i * 50}, {580.f - 380, 225.f + i * 50} }, speed));
     }
 }
 
@@ -46,7 +31,7 @@ void Level3::render(sf::RenderTarget& target)
 
 void Level3::reset()
 {
-    player.reset();
+    Level::reset();
     Level::initBoxes("Level3.txt");
 }
 

@@ -192,11 +192,11 @@ void Level::render(sf::RenderTarget& target)
         target.draw(bg);
     target.draw(finish);
     player.render(target);
-    for (auto& enemy : enemies)
-        enemy.render(target);
     for (auto& wall : walls)
         target.draw(wall);
     for (auto& box : movableBoxes)
         target.draw(box);
+    for (auto& enemy : enemies)
+        enemy.render(target);
     
 }

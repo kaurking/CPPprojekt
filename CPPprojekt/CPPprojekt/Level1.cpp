@@ -22,9 +22,9 @@ void Level1::update(const sf::RenderTarget* target, float deltaTime) {
 
 void Level1::render(sf::RenderTarget& target) {
     Level::render(target); // m�ngija ja vastaste renderimine
-
 }
 
 void Level1::reset() {
     Level::reset();
+    Level::initBoxes("Level1.txt");
 }
