@@ -2,6 +2,9 @@
 
 Level1::Level1() : Level(25.f, 25.f) {
     
+    finish.setPosition(750.f, 550.f);
+    Level::initBoxes("Level1.txt");
+    
     enemies.push_back(Enemy({ {100.f, 100.f}, {380.f, 100.f}, {380.f, 280.f}, {100.f, 280.f}, {100.f, 100.f} }, 475.f));
     enemies.push_back(Enemy({ {420.f, 100.f}, {700.f, 100.f}, {700.f, 280.f}, {420.f, 280.f}, {420.f, 100.f} }, 475.f));
     enemies.push_back(Enemy({ {100.f, 320.f}, {380.f, 320.f}, {380.f, 500.f}, {100.f, 500.f}, {100.f, 320.f} }, 475.f));

@@ -48,10 +48,10 @@ void Enemy::move(float deltaTime)
 	if (distance != 0.f)
 		direction /= distance;
 
-	// liigub järgmise punktini vektoris
+	// liigub jï¿½rgmise punktini vektoris
 	this->shape.move(direction * this->movementSpeed * deltaTime);
 
-	// kui punktil lähedal ,siis kas tagasi (vektor size = 2) või lõpuni.
+	// kui punktil lï¿½hedal ,siis kas tagasi (vektor size = 2) vï¿½i lï¿½puni.
 	if (distance < 2.f)
 	{
 		if (pathOfEnemy.size() == 2)
@@ -61,7 +61,7 @@ void Enemy::move(float deltaTime)
 		}
 		else
 		{
-			// veel ei ole jõutud vektori lõppu liikumisega
+			// veel ei ole jï¿½utud vektori lï¿½ppu liikumisega
 			if (this->movingForward)
 			{
 				currentTargetIndex++;
@@ -70,11 +70,11 @@ void Enemy::move(float deltaTime)
 					this->movingForward = false;
 				}
 			}
-			// jõuti vektori lõppu liikumisega, aeg tagasi minna
+			// jï¿½uti vektori lï¿½ppu liikumisega, aeg tagasi minna
 			else
 			{
 				currentTargetIndex--;
-				// kui jõutakse algusesse tagasi, siis jälle õiget pidi
+				// kui jï¿½utakse algusesse tagasi, siis jï¿½lle ï¿½iget pidi
 				if (currentTargetIndex == 0)
 				{
 					this->movingForward = true;
