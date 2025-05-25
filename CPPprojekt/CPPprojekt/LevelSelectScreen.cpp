@@ -34,7 +34,7 @@ void LevelSelectScreen::initButtons(const sf::RenderTarget* target)
 			y
 		);
 
-		Button button(labels[i], position, this->font);
+		Button button(labels[i], position, font);
 		buttons.push_back(button);
 	}
 }
@@ -44,6 +44,11 @@ LevelSelectScreen::LevelSelectScreen()
 	this->initVariables();
 }
 
+std::vector<Button>& LevelSelectScreen::getButtons()
+{
+	return buttons;
+}
+
 void LevelSelectScreen::update(const sf::RenderTarget* target)
 {
 
@@ -51,6 +56,6 @@ void LevelSelectScreen::update(const sf::RenderTarget* target)
 
 void LevelSelectScreen::render(sf::RenderTarget& target)
 {
-	for (auto el : this->buttons)
+	for (auto el : buttons)
 		el.render(target);
 }

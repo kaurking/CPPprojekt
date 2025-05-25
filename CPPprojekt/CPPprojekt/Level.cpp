@@ -6,6 +6,16 @@
 
 Level::Level(float spawnX, float spawnY) : player(spawnX, spawnY) {}
 
+bool Level::getIsDone()
+{
+    return isDone;
+}
+
+void Level::setIsDone(bool uus)
+{
+    isDone = uus;
+}
+
 void Level::setFinish(sf::RectangleShape& fin)
 {
     finish = fin;
@@ -21,7 +31,7 @@ void Level::update(const sf::RenderTarget* target, float deltaTime)
     movePlayerWithBox(PrevPlayerPos, target);
     if (checkCircleRectangleCollision(player.getShape(), finish))
     {
-        //
+        setIsDone(true);
     }
 }
 

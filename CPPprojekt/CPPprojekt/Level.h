@@ -12,6 +12,7 @@ protected:
 	Player player;
 	Level(float spawnX = 0.f, float spawnY = 0.f);
 	sf::RectangleShape finish;
+	bool isDone = false;
 
 	//Objektid levelis
 	
@@ -38,6 +39,8 @@ protected:
 	void checkPlayerWallCollision(const sf::Vector2f prevPlayerPos);
 	void movePlayerWithBox(const sf::Vector2f prevPlayerPos, const sf::RenderTarget* target);
 public:
+	bool getIsDone();
+	void setIsDone(bool uus);
 	virtual void setFinish(sf::RectangleShape& fin);
 	virtual void update(const sf::RenderTarget* target, float deltaTime);
 	virtual void render(sf::RenderTarget& target);

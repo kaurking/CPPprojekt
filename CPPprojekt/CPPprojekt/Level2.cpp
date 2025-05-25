@@ -2,7 +2,7 @@
 #include <iostream>
 #include <filesystem>
 
-Level2::Level2() : Level(10.f, 10.f) 
+Level2::Level2() : Level(20.f, 20.f) 
 {
     finish.setPosition(750.f, 550.f);
     Level::initBoxes("Level2.txt");

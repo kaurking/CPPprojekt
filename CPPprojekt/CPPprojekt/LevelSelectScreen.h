@@ -20,7 +20,7 @@ private:
 	
 public:
 	LevelSelectScreen();
-
+	std::vector<Button>& getButtons();
 	int wasButtonClicked(sf::Vector2i* mousePos);
 	void initButtons(const sf::RenderTarget* target);
 	void update(const sf::RenderTarget* target);

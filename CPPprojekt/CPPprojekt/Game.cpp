@@ -152,6 +152,17 @@ void Game::handleMouseClick(const sf::Event::MouseButtonEvent& mouse)
 void Game::update(float deltaTime)
 {
 	this->pollEvents();
+	
+	for (size_t i = 0; i < levels.size(); ++i)
+	{
+		if (levels.at(i)->getIsDone())
+		{
+			levelSelectScreen.getButtons().at(i).setColor(sf::Color::Green);
+			levels.at(i)->setIsDone(false);
+			currentState = GameState::LevelSelect;
+			break;
+		}
+	}
 
 	if (this->currentState == GameState::Playing)
 	{
