@@ -16,12 +16,16 @@ protected:
 	std::vector<Enemy> enemies;
 	// vector, kuhu pystitati seinad
 	std::vector<sf::RectangleShape> walls;
+	// vector, kuhu lykati kastid
+	std::vector<sf::RectangleShape> movableBoxes;
 
 	void updateEnemies(const sf::RenderTarget* target, float deltaTime);
 
 	// kontrolli, kas m�ngija l�ks vastasele pihta
 	void checkPlayerEnemyCollision();
+	// kontorllib, kas mangija pyyab labi seina minna
 	void checkPlayerWallCollision(const sf::Vector2f prevPlayerPos);
+	void movePlayerWithBox(const sf::Vector2f prevPlayerPos, const sf::RenderTarget* target);
 public:
 	virtual void update(const sf::RenderTarget* target, float deltaTime);
 	virtual void render(sf::RenderTarget& target);

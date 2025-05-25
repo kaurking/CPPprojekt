@@ -23,22 +23,37 @@ inline bool checkCircleCollision(const sf::CircleShape& a, const sf::CircleShape
 }
 
 // kontrollib sf::CircleShape ja sf::RectangleShape objektide kokkupõrget.
-inline bool checkRectangleCollision(const sf::CircleShape& circ, const sf::RectangleShape rect)
+inline bool checkCircleRectangleCollision(const sf::CircleShape& a, const sf::RectangleShape b)
 {
-    sf::Vector2f circPos = circ.getPosition();
-    float circRad = circ.getRadius();
-    sf::Vector2f circCenter = { circPos.x + circRad, circPos.y + circRad };
+    sf::Vector2f posA = a.getPosition();
+    float radiusA = a.getRadius();
+    sf::Vector2f centreA = { posA.x + radiusA, posA.y + radiusA };
 
-    sf::Vector2f rectPos = rect.getPosition();
-    sf::Vector2f rectSize = rect.getSize();
+    sf::Vector2f posB = b.getPosition();
+    sf::Vector2f sizeB = b.getSize();
 
-    float closestX = std::clamp(circCenter.x, rectPos.x, rectPos.x + rectSize.x);
-    float closestY = std::clamp(circCenter.y, rectPos.y, rectPos.y + rectSize.y);
+    float closestX = std::clamp(centreA.x, posB.x, posB.x + sizeB.x);
+    float closestY = std::clamp(centreA.y, posB.y, posB.y + sizeB.y);
 
-    float dx = circCenter.x - closestX;
-    float dy = circCenter.y - closestY;
+    float dx = centreA.x - closestX;
+    float dy = centreA.y - closestY;
     float distSquared = dx * dx + dy * dy;
-    return distSquared < circRad * circRad;
+    return distSquared < radiusA * radiusA;
+}
+
+// Kontrollib kahe sf::RectangleShape objekti kokkupõrget
+inline bool checkRectangleRectangleCollision(const sf::RectangleShape& a, const sf::RectangleShape& b)
+{
+    sf::Vector2f posA = a.getPosition();
+    sf::Vector2f sizeA = a.getSize();
+
+    sf::Vector2f posB = b.getPosition();
+    sf::Vector2f sizeB = b.getSize();
+
+    bool overlapX = posA.x < posB.x + sizeB.x && posA.x + sizeA.x > posB.x;
+    bool overlapY = posA.y < posB.y + sizeB.y && posA.y + sizeA.y > posB.y;
+
+    return overlapX && overlapY;
 }
 
 

@@ -8,6 +8,7 @@ class Level2 : public Level
 private:
     // mis levelis sees on
     sf::RectangleShape box;
+    sf::RectangleShape box2;
 public:
     Level2();
 

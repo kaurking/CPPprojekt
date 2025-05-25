@@ -1,12 +1,6 @@
-﻿  Game.cpp
-  Level.cpp
-  Level1.cpp
-  Level2.cpp
-  Level3.cpp
-  main.cpp
-  Generating code
-  85 of 450 functions (18.9%) were compiled, the rest were copied from previous compilation.
-    57 functions were new in current compilation
-    54 functions had inline decision re-evaluated but remain unchanged
+﻿  Generating code
+  2 of 458 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   CPPprojekt.vcxproj -> C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\x64\Release\CPPprojekt.exe
