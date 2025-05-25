@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Level.h"
+#include "CollisionUtils.h"
 
 class Level2 : public Level
 {

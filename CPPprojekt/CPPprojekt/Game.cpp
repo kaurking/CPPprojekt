@@ -20,7 +20,7 @@ void Game::initVariables()
 {
 	this->window = nullptr;
 
-	// praegune mängu state (Playing, LevelSelectScreen või Paused)
+	// praegune mï¿½ngu state (Playing, LevelSelectScreen vï¿½i Paused)
 	this->currentState = GameState::LevelSelect;
 
 	this->levelSelectScreen = LevelSelectScreen();
@@ -75,7 +75,7 @@ void Game::pollEvents()
 	}
 }
 
-// mõeldud mängu ajal sellega seonduvate nupuvajutuste jaoks
+// mï¿½eldud mï¿½ngu ajal sellega seonduvate nupuvajutuste jaoks
 void Game::handleKeyPress(sf::Keyboard::Key key)
 {
 	if (key == sf::Keyboard::Escape)
@@ -90,11 +90,11 @@ void Game::handleKeyPress(sf::Keyboard::Key key)
 
 	if (this->currentState == GameState::Playing)
 	{
-		// mängu ajal midagi
+		// mï¿½ngu ajal midagi
 	}
 	else if (this->currentState == GameState::LevelSelect)
 	{
-		// menüünpud
+		// menï¿½ï¿½npud
 	}
 	else if (this->currentState == GameState::Paused)
 	{
@@ -102,7 +102,7 @@ void Game::handleKeyPress(sf::Keyboard::Key key)
 	}
 }
 
-// mõeldud mängu ajal sellega seonduvate hiireklahvivajutuste jaoks
+// mï¿½eldud mï¿½ngu ajal sellega seonduvate hiireklahvivajutuste jaoks
 void Game::handleMouseClick(const sf::Event::MouseButtonEvent& mouse)
 {
 	// kui on levelselect
@@ -112,7 +112,7 @@ void Game::handleMouseClick(const sf::Event::MouseButtonEvent& mouse)
 		sf::Vector2i mp = sf::Mouse::getPosition(*this->window);
 		int lvl = this->levelSelectScreen.wasButtonClicked(&mp);
 
-		// leveli valimine nupu põjal
+		// leveli valimine nupu pï¿½jal
 		if (lvl > 0 && lvl <= this->levels.size())
 		{
 			this->currentLevel = this->levels[lvl - 1];

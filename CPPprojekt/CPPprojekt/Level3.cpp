@@ -8,12 +8,12 @@ Level3::Level3() : Level(50.f, 50.f) {
 }
 
 void Level3::update(const sf::RenderTarget* target, float deltaTime) {
-    Level::update(target, deltaTime); // mängija ja vastaste collisioni jaoks
+    Level::update(target, deltaTime); // mï¿½ngija ja vastaste collisioni jaoks
 
 }
 
 void Level3::render(sf::RenderTarget& target) {
-    Level::render(target); // mängija ja vastaste renderimine
+    Level::render(target); // mï¿½ngija ja vastaste renderimine
     target.draw(box);
 }
 

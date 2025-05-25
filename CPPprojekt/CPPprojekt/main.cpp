@@ -6,7 +6,7 @@ int main()
 	// Game engine
 	Game game;
 
-	// Kell mängu jaoks
+	// Kell mï¿½ngu jaoks
 	sf::Clock clock;
 
 	// Game loop

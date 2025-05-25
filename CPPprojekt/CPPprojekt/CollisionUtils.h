@@ -2,7 +2,7 @@
 
 #include <SFML/Graphics.hpp>
 
-// kontrollib sd::CircleShape obeketide kokkupõrget
+// kontrollib sd::CircleShape obeketide kokkupï¿½rget
 inline bool checkCircleCollision(const sf::CircleShape& a, const sf::CircleShape& b)
 {
     sf::Vector2f posA = a.getPosition();
@@ -20,6 +20,25 @@ inline bool checkCircleCollision(const sf::CircleShape& a, const sf::CircleShape
     float radiusSum = radiusA + radiusB;
 
     return distSquared < radiusSum * radiusSum;
+}
+
+// kontrollib sf::CircleShape ja sf::RectangleShape objektide kokkupÃµrget.
+inline bool checkRectangleCollision(const sf::CircleShape& circ, const sf::RectangleShape rect)
+{
+    sf::Vector2f circPos = circ.getPosition();
+    float circRad = circ.getRadius();
+    sf::Vector2f circCenter = { circPos.x + circRad, circPos.y + circRad };
+
+    sf::Vector2f rectPos = rect.getPosition();
+    sf::Vector2f rectSize = rect.getSize();
+
+    float closestX = std::clamp(circCenter.x, rectPos.x, rectPos.x + rectSize.x);
+    float closestY = std::clamp(circCenter.y, rectPos.y, rectPos.y + rectSize.y);
+
+    float dx = circCenter.x - closestX;
+    float dy = circCenter.y - closestY;
+    float distSquared = dx * dx + dy * dy;
+    return distSquared < circRad * circRad;
 }
 
 
