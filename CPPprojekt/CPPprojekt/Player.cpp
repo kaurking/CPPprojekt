@@ -3,7 +3,7 @@
 
 void Player::initVariables()
 {
-	this->movementSpeed = 200.f;
+	this->movementSpeed = 250.f;
 }
 
 void Player::initShape()

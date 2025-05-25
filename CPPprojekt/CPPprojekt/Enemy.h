@@ -16,9 +16,9 @@ private:
 	sf::Vector2f startPos;
 	sf::Vector2f endPos;
 
-	// vektor, mis defineeriv vaenlase liikumise teekonna. Ühe sf::vector2f'ga vektor teeb nii, et 
-	// startPos = endPos. Kui on 2 sf::vector2f'i vektoris, siis on mõeldud sirgjooneliseks 
-	// liikumiseks ja kui rohkem, siis saab vektori abil määrata neid punkte. 
+	// vektor, mis defineeriv vaenlase liikumise teekonna. ï¿½he sf::vector2f'ga vektor teeb nii, et 
+	// startPos = endPos. Kui on 2 sf::vector2f'i vektoris, siis on mï¿½eldud sirgjooneliseks 
+	// liikumiseks ja kui rohkem, siis saab vektori abil mï¿½ï¿½rata neid punkte. 
 	std::vector<sf::Vector2f> pathOfEnemy;
 
 	// liikumise jaoks

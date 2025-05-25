@@ -1,4 +1,11 @@
-C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\Game.cpp;C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\x64\Debug\Game.obj
-C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\LevelSelectScreen.cpp;C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\x64\Debug\LevelSelectScreen.obj
-C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\main.cpp;C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\x64\Debug\main.obj
-C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\Player.cpp;C:\Users\Kristo\Desktop\kool\C++\CPPprojekt\CPPprojekt\CPPprojekt\x64\Debug\Player.obj
+C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\Button.cpp;C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\x64\Debug\Button.obj
+C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\Enemy.cpp;C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\x64\Debug\Enemy.obj
+C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\Game.cpp;C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\x64\Debug\Game.obj
+C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\Level.cpp;C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\x64\Debug\Level.obj
+C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\Level1.cpp;C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\x64\Debug\Level1.obj
+C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\Level2.cpp;C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\x64\Debug\Level2.obj
+C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\Level3.cpp;C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\x64\Debug\Level3.obj
+C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\LevelSelectScreen.cpp;C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\x64\Debug\LevelSelectScreen.obj
+C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\main.cpp;C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\x64\Debug\main.obj
+C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\PausedScreen.cpp;C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\x64\Debug\PausedScreen.obj
+C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\Player.cpp;C:\Users\Kristo\Desktop\CPPprojekt\CPPprojekt\CPPprojekt\x64\Debug\Player.obj

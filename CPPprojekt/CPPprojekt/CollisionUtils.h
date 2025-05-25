@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 
 // kontrollib sd::CircleShape obeketide kokkup�rget
-inline bool checkCircleCollision(const sf::CircleShape& a, const sf::CircleShape& b)
+inline bool checkCircleCircleCollision(const sf::CircleShape& a, const sf::CircleShape& b)
 {
     sf::Vector2f posA = a.getPosition();
     sf::Vector2f posB = b.getPosition();

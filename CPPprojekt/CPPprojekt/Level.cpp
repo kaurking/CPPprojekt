@@ -1,8 +1,15 @@
 #include "Level.h"
 #include <iostream>
 #include "CollisionUtils.h"
+#include <fstream>
+#include <sstream>
 
 Level::Level(float spawnX, float spawnY) : player(spawnX, spawnY) {}
+
+void Level::setFinish(sf::RectangleShape& fin)
+{
+    finish = fin;
+}
 
 void Level::update(const sf::RenderTarget* target, float deltaTime)
 {
@@ -12,6 +19,72 @@ void Level::update(const sf::RenderTarget* target, float deltaTime)
     checkPlayerEnemyCollision();
     checkPlayerWallCollision(PrevPlayerPos);
     movePlayerWithBox(PrevPlayerPos, target);
+    if (checkCircleRectangleCollision(player.getShape(), finish))
+    {
+        //
+    }
+}
+
+// loeb failist kõik kastid, mis levelis on ja populeerib vastavad vektorid
+void Level::initBoxes(std::string filePath)
+{
+    walls.clear();
+    movableBoxes.clear();
+    backgroundBoxes.clear();
+
+    std::ifstream fin(filePath);
+    if (!fin) std::cerr << "Failed to load from file: " << filePath << '\n';
+
+    std::string rida;
+    std::vector<sf::RectangleShape>* target = &walls;
+    while (getline(fin, rida))
+    {
+        if (rida.rfind("//", 0) == 0)
+        {
+            continue;
+        }
+        if (rida == "boxes") 
+        {
+            target = &movableBoxes; 
+            continue;
+        }
+        if (rida == "background")
+        {
+            target = &backgroundBoxes;
+            continue;
+        }
+
+        // failist rect info
+        std::stringstream ss(rida);
+        std::string xStr, yStr, sizeXStr, sizeYStr, rStr, gStr, bStr;
+        
+        std::getline(ss, xStr, ';');
+        std::getline(ss, yStr, ';');
+        std::getline(ss, sizeXStr, ';');
+        std::getline(ss, sizeYStr, ';');
+        std::getline(ss, rStr, ';');
+        std::getline(ss, gStr, ';');
+        ss >> bStr;
+
+        // string to float
+        float x = std::stof(xStr) * 25;
+        float y = std::stof(yStr) * 25;
+        float sizeX = std::stof(sizeXStr) * 25;
+        float sizeY = std::stof(sizeYStr) * 25;
+        int r = std::stoi(rStr);
+        int g = std::stoi(gStr);
+        int b = std::stoi(bStr);
+
+        sf::RectangleShape box;
+        box.setPosition(x, y);
+        box.setSize({ sizeX, sizeY });
+        box.setFillColor(sf::Color(r, g, b));
+
+        target->push_back(box);
+    }
+
+    finish.setSize({ 50.f, 50.f });
+    finish.setFillColor(sf::Color::Green);
 }
 
 void Level::updateEnemies(const sf::RenderTarget* target, float deltaTime)
@@ -46,8 +119,12 @@ void Level::movePlayerWithBox(const sf::Vector2f prevPlayerPos, const sf::Render
 
             // porge window bounds-idega
             sf::FloatRect windowBounds(0.f, 0.f, (float)target->getSize().x, (float)target->getSize().y);
-            sf::FloatRect boxBounds(newBoxPos, box.getSize());
-            bool insideWindow = windowBounds.intersects(boxBounds);
+            sf::Vector2f size = box.getSize();
+            bool insideWindow =
+                newBoxPos.x >= 0 &&
+                newBoxPos.y >= 0 &&
+                newBoxPos.x + size.x <= windowBounds.width &&
+                newBoxPos.y + size.y <= windowBounds.height;            
 
             if (insideWindow && !collidesWithWall)
             {
@@ -57,7 +134,6 @@ void Level::movePlayerWithBox(const sf::Vector2f prevPlayerPos, const sf::Render
             {
                 player.setPositionOfPlayer(prevPlayerPos.x, prevPlayerPos.y);
             }
-
         }
     }
 }
@@ -78,7 +154,7 @@ void Level::checkPlayerEnemyCollision()
 {
     for (auto& enemy : enemies)
     {
-        if (checkCircleCollision(player.getShape(), enemy.getShape()))
+        if (checkCircleCircleCollision(player.getShape(), enemy.getShape()))
         {
             player.reset(); // mingi m�rguande peaks ka andma
             break;
@@ -88,6 +164,9 @@ void Level::checkPlayerEnemyCollision()
 
 void Level::render(sf::RenderTarget& target)
 {
+    for (auto& bg : backgroundBoxes)
+        target.draw(bg);
+    target.draw(finish);
     player.render(target);
     for (auto& enemy : enemies)
         enemy.render(target);
@@ -95,4 +174,5 @@ void Level::render(sf::RenderTarget& target)
         target.draw(wall);
     for (auto& box : movableBoxes)
         target.draw(box);
+    
 }
