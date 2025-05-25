@@ -103,6 +103,20 @@ void Level::updateEnemies(const sf::RenderTarget* target, float deltaTime)
         enemy.update(target, deltaTime);
 }
 
+void Level::resetEnemies()
+{
+    for (auto& enemy : this->enemies)
+    {
+        enemy.reset();
+    }
+}
+
+void Level::reset()
+{
+    this->player.reset();
+    this->resetEnemies();
+}
+
 void Level::movePlayerWithBox(const sf::Vector2f prevPlayerPos, const sf::RenderTarget* target)
 {
     sf::Vector2f playerMovement = player.getShape().getPosition() - prevPlayerPos;

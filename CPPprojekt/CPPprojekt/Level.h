@@ -18,6 +18,8 @@ protected:
 	
 	// vektor, kus Enemy-d elavad
 	std::vector<Enemy> enemies;
+
+	virtual void resetEnemies();
 	
 	// vector, kuhu pystitati seinad
 	std::vector<sf::RectangleShape> walls;
@@ -44,7 +46,7 @@ public:
 	virtual void setFinish(sf::RectangleShape& fin);
 	virtual void update(const sf::RenderTarget* target, float deltaTime);
 	virtual void render(sf::RenderTarget& target);
-	virtual void reset() = 0;
+	virtual void reset();
 
 	virtual ~Level() = default;
 

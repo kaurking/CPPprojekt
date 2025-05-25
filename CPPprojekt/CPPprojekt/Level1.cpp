@@ -2,8 +2,7 @@
 
 Level1::Level1() : Level(50.f, 50.f) {
     
-    this->enemy1 = Enemy({ {100.f, 100.f}, {300.f, 100.f}, {300.f, 300.f}, {100.f, 300.f} });
-    enemies.push_back(enemy1);
+    enemies.push_back(Enemy({ {100.f, 100.f}, {300.f, 100.f}, {300.f, 300.f}, {100.f, 300.f} }));
 }
 
 void Level1::update(const sf::RenderTarget* target, float deltaTime) {
@@ -17,11 +16,5 @@ void Level1::render(sf::RenderTarget& target) {
 }
 
 void Level1::reset() {
-    player.reset();
-    resetEnemies();
-}
-
-void Level1::resetEnemies()
-{
-    enemy1.reset();
+    Level::reset();
 }

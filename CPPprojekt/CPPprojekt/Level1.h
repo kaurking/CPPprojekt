@@ -13,6 +13,5 @@ public:
     void update(const sf::RenderTarget* target, float deltaTime) override;
     void render(sf::RenderTarget& target) override;
     void reset() override;
-    void resetEnemies();
-
+    
 };

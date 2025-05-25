@@ -1,5 +1,4 @@
 #include "Enemy.h"
-
 #include <vector>
 
 void Enemy::initVariables()
